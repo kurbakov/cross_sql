@@ -9,4 +9,5 @@ INCLUDEPATH += .
 QT += widgets gui
 
 # Input
+HEADERS += gui.h
 SOURCES += main.cpp gui.cpp
