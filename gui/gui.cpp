@@ -1,43 +1,37 @@
 #include <gui.h>
-
-#include <QMenu>
-#include <QMenuBar>
 #include <QtWidgets>
-#include <QVBoxLayout>
-#include <QHBoxLayout>
 
 
-Gui::Gui(QWidget *parent) : QMainWindow(parent)
+Gui::Gui()
 {
   	createMenu();
 
   	// List of idgets to use in the App
-  	QTextEdit *queryEdit = new QTextEdit();
-  	queryEdit->setPlainText(tr("write query here..."));
 
-  	QVBoxLayout *mainLayout = new QVBoxLayout();
+    bigEditor = new QTextEdit;
+    bigEditor->setPlainText(tr("This widget takes up all the remaining space in the top-level layout."));
 
-
-  	mainLayout->addWidget(queryEdit);
+  	QVBoxLayout *mainLayout = new QVBoxLayout;
+  	mainLayout->setMenuBar(menuBar);
+	mainLayout->addWidget(bigEditor);
   	setLayout(mainLayout);
+  	
   	setWindowTitle("CROSS");
   	resize(300, 200);
-
 }
 
 void Gui::createMenu()
 {
 
-  	QMenu *file;
-  	file = menuBar()->addMenu("&File");
+    menuBar = new QMenuBar;
 
-  	QMenu *connection;
-  	connection = menuBar()->addMenu("&Connection");
+    fileMenu = new QMenu(tr("&File"), this);
+    connection = new QMenu(tr("&Connection"));
+    run = new QMenu(tr("&Run"));
+    about = new QMenu(tr("&About"));
 
-  	QMenu *run; 
-  	run = menuBar()->addMenu("&Run");
-  	
-  	QMenu *about;
-  	about = menuBar()->addMenu("&About");
-
+    menuBar->addMenu(fileMenu);
+    menuBar->addMenu(connection);
+    menuBar->addMenu(run);
+    menuBar->addMenu(about);
 }

@@ -4,16 +4,29 @@
 #pragma once
 
 #include <QMainWindow>
-#include <QApplication>
 
+class QTextEdit;
+class QMenuBar;
+class QMenu;
 
 class Gui : public QMainWindow
 {
+	Q_OBJECT
+
 private:
+	
+	QTextEdit *bigEditor;
+	
+	QMenuBar *menuBar;
+	QMenu *fileMenu;
+	QMenu *connection;
+	QMenu *run;
+	QMenu *about;
+
 	void createMenu();
 
 public:
-	Gui(QWidget *parent = 0);
+	Gui();
 
 };
 
