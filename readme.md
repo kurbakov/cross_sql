@@ -34,4 +34,4 @@ AND Б.Курсы.Курс = «Углубленное программирова
 Также стоит обратить внимание на работу с указателями когда большая выборка дабы не создавать копии больший объектов. 
 
 
-![alt text](https://github.com/kurbakov/project_z/blob/master/img/uml_class.png)
+![alt text](https://github.com/kurbakov/project_z/blob/master/uml_class.png)
