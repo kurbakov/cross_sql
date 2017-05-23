@@ -10,10 +10,10 @@ int main(int argc, char **argv)
 
 	Connection_manager* sql = new Connection_manager();
 
-	sql->add_connection("name_postgres", "postgres", "127.0.0.1", "5432", "postgres", "kurbakov", "t6aw88e5");
+	sql->add_connection("name_postgres", "postgres", "127.0.0.1", "5432", "postgres", "LOGIN", "PASSWORD");
 	sql->execute("name_postgres", "select * from test.test_table;");
 	
-	sql->add_connection("name_mysql", "mysql", "127.0.0.1", "3306", "test", "kurbakov", "t6aw88e5");
+	sql->add_connection("name_mysql", "mysql", "127.0.0.1", "3306", "test", "LOGIN", "PASSWORD");
 	sql->execute("name_mysql", "select * from test_table;");
 	
 	sql->print_table("name_postgres");
