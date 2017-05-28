@@ -4,9 +4,9 @@
 #pragma once
 
 #include <vector>
-#include <iostream>
 #include <map>
 #include <libpq-fe.h>       			// postgresAPI
+#include "connection.h"
 
 class PostgresIterator;
 
