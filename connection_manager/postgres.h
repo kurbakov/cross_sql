@@ -5,12 +5,14 @@
 
 #include <vector>
 #include <map>
+
 #include <libpq-fe.h>       			// postgresAPI
+
 #include "connection.h"
 
 class PostgresIterator;
 
-class PostgresConnection
+class PostgresConnection : public Connection
 {
 private:
 		PGconn* conn;
