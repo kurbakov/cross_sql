@@ -2,7 +2,7 @@
 
 The implementation of the single interface to access data from different databases and aggregate the data in memory.
 
-### Example:
+### Idea:
 Let we have the databases A and B.  
 The database A has the table 'students':
 ```sql
@@ -33,5 +33,14 @@ Join {select * from lection;}::B as d
 Where a.city in (‘City 1’, ‘City 2’)
 AND b.lection_name = 'my lection name';
 ```
+
+
+### Implementation
+
+The current implementation consists of:
+- GUI
+- Connection handler
+- Query parser
+- Building the result
 
 ![alt text](https://github.com/kurbakov/project_z/blob/master/uml_class.png)
