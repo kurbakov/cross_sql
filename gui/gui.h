@@ -13,7 +13,6 @@ class QAction;
 class Gui : public QMainWindow
 {
     Q_OBJECT
-
 public:
     Gui();
   
